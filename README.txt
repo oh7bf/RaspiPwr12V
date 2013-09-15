@@ -2,7 +2,7 @@
 RASPBERRY PI POWER SUPPLY WITH I2C CONTROL
 ==========================================
 
-A simple switching power supply with easily available parts. Either fixed
+A simple switching mode power supply with easily available parts. Either fixed
 5.0 voltage output regulator 2576T-5 or adjustable voltage model 2576T-ADJ
 can be used. With the latter it is possible to get output of 5.1 V or 5.2 V
 to compensate resistive losses in the connecting USB cable. A PIC processor
