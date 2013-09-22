@@ -22,7 +22,7 @@ C4        100uF/25V
 CONN1     screw terminal	
 CONN2     2 x USB A receptable	
 D1        1N5822
-D2        LED 3 mm	
+D2,3      LED 3 mm	
 J1        5 pins header 
 J2,5      3 pins header 
 J3,4,6,7  2 pins header 
@@ -32,7 +32,7 @@ Q1,1      2N3904
 Q3,4      BS170
 R1,5,6    10k
 R2        100k
-R3,7      1k
+R3,7,10   1k
 R4        ~ 1 M
 R8        open(1.2k)
 R9        short(3.9k)
@@ -63,17 +63,17 @@ PiPIC/12f675/pic12si2c/pic12si2c.asm
 
 The EEPROM needs to have following data
 
-address   data
-10        F8
-11        E6
-12        72
-13        E7
-14        FF
-15        1D
-16        CE
-17        FE
-21        80
-22        21
+address   data      bits inverted except for TRISIO
+10        F8        ini_CMCON
+11        E6        ini_GPIO
+12        72        ini_ADCON0
+13        E7        ini_ANSEL
+14        FF        ini_VRCON
+15        1D        ini_TRISIO
+16        CE        ini_T1CON
+17        FE        ini_IOC
+21        80        enable event triggered tasks
+22        21        GP0 low task command: set GP1=1
 23        FF
 
 See the manual page pipic(1) on how this data could be programmed.
