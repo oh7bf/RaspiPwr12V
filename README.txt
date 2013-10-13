@@ -31,6 +31,7 @@ CONN1     screw terminal
 CONN2     2 x USB A receptable	
 D1        1N5822
 D2,3      LED 3 mm	
+F1        RX110F for 1.1 A max output current
 J1        5 pins header 
 J2,5      3 pins header 
 J3,4,6,7  2 pins header 
@@ -85,4 +86,7 @@ address   data      bits inverted except for TRISIO
 23        FF
 
 See the manual page pipic(1) on how this data could be programmed.
+
+At the Raspberry Pi the daemon pipicpowerd(1) can be used to monitor the 
+battery voltage and power off after preset time delay.
 
