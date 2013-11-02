@@ -24,7 +24,7 @@ SDA (GPIO0) ---- 1 SDA
 SCL (GPIO1) ---- 3 SCL
 
 Ground connection is not needed in a typical application. If the ground is 
-connected from GPIO on the Raspberry Pi be careful to connect it to the correct 
+connected from GPIO on the Raspberry Pi be careful to connect it to the correct
 pin at the header. Large currents can flow in the ground wire and these could 
 damage the System-on-Chip (SoC) on the Raspberry Pi if wrong connections are 
 done. Note also that the two ground potentials to be connected are not 
