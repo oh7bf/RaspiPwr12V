@@ -8,15 +8,41 @@ can be used. With the latter it is possible to get output of 5.1 V or 5.2 V
 to compensate resistive losses in the connecting USB cable. A PIC processor
 is used to switch the power on/off and to monitor the battery voltage.
 
-The circuit is being tested at the time of writing this README file. Building 
-needs good understanding of the circuit and good skills in electronics. Badly
-build power supply could damage the Raspberry Pi permanently.
+The battery or power supply needs to have fuse(s) on its output terminals.
+If the power is not fed with the micro USB connector to the Raspberry Pi it
+might be useful to add the polyfuse F1 to the circuit. The polyfuse can be
+replaced with a microfuse, for example, if wide operating temperature range is
+needed. Note that the polyfuse will add some resistance typically 0.1 - 0.3
+ohms in series to the output and this will lead into additional voltage drop
+at high currents. The traditional fuses have a lower resistance than the
+polyfuses.
+
+Connection to the Raspberry Pi I2C bus is done as follows
+
+Raspberry Pi     power supply J2        
+SDA (GPIO0) ---- 1 SDA
+SCL (GPIO1) ---- 3 SCL
+
+Ground connection is not needed in a typical application. If the ground is 
+connected from GPIO on the Raspberry Pi be careful to connect it to the correct 
+pin at the header. Large currents can flow in the ground wire and these could 
+damage the System-on-Chip (SoC) on the Raspberry Pi if wrong connections are 
+done. Note also that the two ground potentials to be connected are not 
+necessarily exactly at the same level. 
+
+When the Raspberry Pi is powered down and the PIC is still supplied by the
+3.0 V regulator a small current of about 30 uA will continue to flow through
+R5 and R6 to the Raspberry Pi SDA and SCL pins.
 
 The board_mirror.pdf can be printed or copied with a laser printer and 
 transferred with iron on a copper clad glassfiber board for etching. Sharp
 knife and multimeter are needed to fix any possible shorts on the produced
 PCB. Three ground jumper wires should also be soldered since the PCB is one
 sided for easier production.
+
+The circuit is being tested at the time of writing this README file. Building 
+needs good understanding of the circuit and good skills in electronics. Badly
+build power supply could damage the Raspberry Pi permanently. 
 
 
 Parts
@@ -31,7 +57,7 @@ CONN1     screw terminal
 CONN2     2 x USB A receptable	
 D1        1N5822
 D2,3      LED 3 mm	
-F1        RX110F for 1.1 A max output current
+F1        RX110F for 1.1 A max output current, optional
 J1        5 pins header 
 J2,5      3 pins header 
 J3,4,6,7  2 pins header 
