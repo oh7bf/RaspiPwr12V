@@ -19,9 +19,9 @@ polyfuses.
 
 Connection to the Raspberry Pi I2C bus is done as follows
 
-Raspberry Pi     power supply J2        
-SDA (GPIO0) ---- 1 SDA
-SCL (GPIO1) ---- 3 SCL
+Raspberry Pi     power supply CONN3     
+SDA (GPIO0) ---- 2 SDA
+SCL (GPIO1) ---- 4 SCL
 
 Ground connection is not needed in a typical application. If the ground is 
 connected from GPIO on the Raspberry Pi be careful to connect it to the correct
@@ -55,20 +55,21 @@ C4        100uF/25V
 C5        100nF optional, soldered on the bottom of PCB
 CONN1     screw terminal	
 CONN2     2 x USB A receptable	
+CONN3     modular 4P4C
 D1        1N5822
 D2,3      LED 3 mm	
-F1        RX110F for 1.1 A max output current, optional
+F1        RX110F for 1.1 A max output current or microfuse or short
 J1        5 pins header 
-J2,5      3 pins header 
+J2        3 pins header 
 J3,4,6,7  2 pins header 
-J5        3 pins header 
-L1        100uH 5A toroid
+J5        screw terminal 
+L1        100uH 3A toroid
 Q1,1      2N3904
 Q3,4      BS170
 R1        10k
 R2,5,6    100k
 R3,7,10   1k
-R4        ~ 1 M
+R4        1.5M
 R8        open(1.2k)
 R9        short(3.9k)
 S1        PCB button	
