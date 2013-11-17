@@ -52,7 +52,7 @@ C1        2.2uF/25V
 C2        1uF/35V
 C3        1000uF/25V
 C4        100uF/25V
-C5        100nF optional, soldered on the bottom of PCB
+C5        100nF optional
 CONN1     screw terminal	
 CONN2     2 x USB A receptable	
 CONN3     modular 4P4C
