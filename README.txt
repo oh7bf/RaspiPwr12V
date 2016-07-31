@@ -84,6 +84,7 @@ Files
 board_mirror.pdf         - PCB for toner transfer production
 board_silk_mirror.pdf    - silk screen for toner transfer printing
 board_component.pdf      - PCB component placement
+I2c5VPSUAssembly.pdf     - assembly manual
 raspipwr12V              - project definition file
 raspipwr12V.pdf          - circuit diagram
 raspipwr12V.png
@@ -95,7 +96,7 @@ Software
 
 The PIC is programmed with the code in repository
 
-PiPIC/12f675/pic12si2c/pic12si2c.asm
+PiPIC/asm/pic12si2c.asm
 
 The EEPROM needs to have following data
 
